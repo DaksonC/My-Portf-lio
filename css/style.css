@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+body {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(../imagens/fundo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+/*Barra de Menu
+**************************************/
+.navigation {
+  position: relative;
+  height: 500px;
+  background: #3a3a3a;
+  width: 70px;
+  box-shadow: 10px 0 0 #d39e00;
+  border-left: 10px solid #2d2d2d;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+.navigation:hover {
+  width: 300px;
+}
+.navigation ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-left: 5px;
+  padding-top: 80px;
+}
+.navigation ul li {
+  position: relative;
+  list-style: none;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.navigation ul li a {
+  position: relative;
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+  color: #e3e3e3;
+}
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 70px;
+}
+.navigation ul li a .icon i {
+  position: relative;
+  font-size: 1.5rem;
+  z-index: 1;
+}
+.navigation ul li a .icon img {
+  position: relative;
+  width: 30px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 10px;
+  z-index: 1;
+}
+.navigation ul li a .title {
+  position: relative;
+  display: block;
+  padding-left: 10px;
+  height: 60px;
+  line-height: 60px;
+  white-space: nowrap;
+}
+.navigation ul li.active {
+  background: #d39e00;
+}
+.navigation ul li.active a::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background: #3a3a3a;
+  border-radius: 50%;
+  box-shadow: 15px 15px 0 #d39e00;
+}
+.navigation ul li.active a::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background: #3a3a3a;
+  border-radius: 50%;
+  box-shadow: 15px -15px 0 #d39e00;
+}
+div.container {
+  padding-left: 0px;
+}
+
+/*Seção principal
+*************************************/
+header .container {
+  clear: both;
+}
+section#home {
+  background-color: rgba(8, 8, 8, 0.4);
+  border-radius: 8px;
+  border: 1px solid #e3e3e359;
+  padding: 20px;
+}
+h1 {
+  font-weight: 900;
+  letter-spacing: 0.3em;
+  color: #e3e3e3;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+span h1 {
+  font-size: 4.2em;
+}
+h4,
+h5 {
+  color: #e3e3e3;
+}
+
+p {
+  color: #e3e3e3;
+}
+p span {
+  font-size: 2.2em;
+  color: #d39e00;
+}
+span#hometext {
+  color: #e3e3e3;
+}
+
+/*Página de Contato
+*******************/
+.contato a {
+  text-decoration: none;
+}
+.contato a,
+.contato p {
+  color: #e3e3e3;
+  font-size: 20px;
+}
+
+.contato a i:hover {
+  color: #d39e00;
+  font-size: 21px;
+}
+
+/*Portfólio
+************************/
+section .container.caixas {
+  position: relative;
+  display: flex;
+  border: 1px solid red;
+}
+p.card-text {
+  color: #2d2d2d;
+}
+
+/*Rodape
+*************************************/
+/*rodape*/
+.rodape {
+  bottom: 0;
+  width: 100%;
+  clear: both;
+  color: #e3e3e3;
+  text-align: center;
+  background: #313131;
+}
+.rodape span {
+  color: #d39e00;
+}
+
+/*Dispositivos extra pequenos (portrait phones, Menor que 576px)*/
+@media (max-width: 575.98px) {
+  h1,
+  span h1 {
+    font-size: 1.5em;
+    letter-spacing: 0.03em;
+  }
+  p span {
+    font-size: 1em;
+  }
+
+  /* Dispositivos pequenos (landscape phones, 576px and up)*/
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    h1 {
+      font-size: 2.8em;
+    }
+    header .container {
+      margin-left: 0px;
+    }
+    span h1 {
+      font-size: 2.2em;
+    }
+  }
+
+  /* Dispositivos médios(tablets, 768px and up)*/
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    h1 {
+      font-size: 2.8em;
+    }
+    header .container {
+      margin-left: 20px;
+    }
+    span h1 {
+      font-size: 3.5em;
+    }
+  }
+
+  /* Dispositivos grandes (desktops, 992px and up)*/
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    h1 {
+      font-size: 3.8em;
+    }
+  }
+
+  /* Dispositivos extragrandes (large desktops, 1200px and up)*/
+  @media (min-width: 1200px) {
+    h1 {
+      font-size: 4em;
+    }
+  }
+}
